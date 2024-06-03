@@ -13,10 +13,13 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    display: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: top 0.3s;
+}
+
+header.hide {
+    display: none;
 }
 
 header.show {
@@ -80,7 +83,7 @@ header nav ul li a {
 }
 
 .content {
-    padding: 2em 0;
+    padding: 4em 0 2em;
 }
 
 footer {
