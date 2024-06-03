@@ -13,14 +13,14 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    display: none; /* Hide initially */
+    display: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: display 0.3s;
     z-index: 1000;
+    transition: top 0.3s;
 }
 
 header.show {
-    display: block; /* Show when scrolled */
+    display: block;
 }
 
 header nav ul {
