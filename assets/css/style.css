@@ -12,7 +12,13 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    display: none;
+    left: 0;
+    display: none; /* Hide initially */
+    transition: top 0.3s; /* Smooth transition */
+}
+
+header.show {
+    display: block; /* Show when scrolled */
 }
 
 header nav ul {
