@@ -1,14 +1,22 @@
 ---
 layout: default
 ---
-<section class="hero">
-    <div class="container">
-        <h1>ERC-ChinaComX</h1>
-        <p>Comics Culture in the People's Republic</p>
+<div class="splash">
+    <div class="splash-content">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Project Logo">
+        <h1>ChinaComX</h1>
+        <p>Exploring beyond the Silk Road</p>
+        <a href="#posts" class="scroll-down">&#8595;</a>
     </div>
-</section>
-<section class="content">
+</div>
+<section id="posts" class="content">
     <div class="container">
-        {{ content }}
+        <h2>Latest Posts</h2>
+        {% for post in site.posts %}
+            <article>
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <p>{{ post.excerpt }}</p>
+            </article>
+        {% endfor %}
     </div>
 </section>

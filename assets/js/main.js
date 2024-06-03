@@ -1,3 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("JavaScript is running!");
+    const header = document.getElementById("header");
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > window.innerHeight) {
+            header.style.display = "block";
+        } else {
+            header.style.display = "none";
+        }
+    });
 });

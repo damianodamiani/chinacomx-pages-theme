@@ -9,6 +9,10 @@ header {
     background: #333;
     color: #fff;
     padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: none;
 }
 
 header nav ul {
@@ -28,18 +32,43 @@ header nav ul li a {
     text-decoration: none;
 }
 
-.hero {
+.splash {
     background: url('/assets/images/hero.jpg') no-repeat center center/cover;
     color: #fff;
-    height: 300px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 3em;
+.splash-content {
+    max-width: 600px;
+}
+
+.splash img {
+    max-width: 100px;
+}
+
+.scroll-down {
+    display: block;
+    margin-top: 20px;
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
 }
 
 .content {
@@ -51,4 +80,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1em;
 }
