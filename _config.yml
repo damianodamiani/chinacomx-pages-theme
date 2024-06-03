@@ -1,0 +1,5 @@
+title: "ChinaComX: Comics Culture in the People's Republic of China"
+description: An academic project.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourusername.github.io" # the base hostname & protocol for your site
+theme: minima
