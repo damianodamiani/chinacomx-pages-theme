@@ -2,22 +2,3 @@
 layout: home
 title: Home
 ---
-<div class="splash">
-    <div class="splash-content">
-        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Project Logo">
-        <h1>ChinaComX</h1>
-        <p>Comics Culture in the People's Republic of China</p>
-        <a href="#posts" class="scroll-down">&#8595;</a>
-    </div>
-</div>
-<section id="posts" class="content">
-    <div class="container">
-        <h2>Latest Posts</h2>
-        {% for post in site.posts %}
-            <article>
-                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt }}</p>
-            </article>
-        {% endfor %}
-    </div>
-</section>
