@@ -6,15 +6,17 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: #fff;
+    color: #333;
     padding: 1em 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     display: none; /* Hide initially */
-    transition: top 0.3s; /* Smooth transition */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: display 0.3s;
+    z-index: 1000;
 }
 
 header.show {
@@ -34,7 +36,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
 }
 
@@ -86,6 +88,23 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em 0;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li {
+    margin: 0 1em;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .container {
