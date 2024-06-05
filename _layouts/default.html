@@ -12,6 +12,11 @@
         {{ content }}
     </main>
     {% include footer.html %}
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const header = document.getElementById("header");
+            header.classList.add("show");
+        });
+    </script>
 </body>
 </html>
