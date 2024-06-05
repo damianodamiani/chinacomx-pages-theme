@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Existing CSS code */
 
 header {
     background: #fff;
@@ -16,25 +17,30 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: none; /* Hide initially */
-    transition: top 0.3s, opacity 0.3s; /* Smooth transition */
+    transition: top 0.3s;
 }
 
 header.show {
     display: block;
 }
 
-header.navbar {
-    display: block;
-}
-
-header.navbar.navbar-expand-lg.navbar-light .navmenu.navbar-collapse.collapse {
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-header.navbar.navbar-expand-lg.navbar-light .navbar-nav .nav-item .nav-link {
-    color: #333;
+header nav ul li {
+    margin: 0 1em;
 }
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
 
 .splash {
     background: url('/assets/images/hero.jpg') no-repeat center center/cover;
