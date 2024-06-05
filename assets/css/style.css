@@ -15,13 +15,12 @@ header {
     left: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    display: none; /* Hide initially */
+    opacity: 0; /* Initially hidden */
     transition: top 0.3s, opacity 0.3s; /* Smooth transition */
 }
 
 header.show {
-    display: block;
-    opacity: 1;
+    opacity: 1; /* Show when scrolled */
 }
 
 header.navbar .navbar-brand svg {
@@ -79,7 +78,6 @@ header.navbar .navbar-nav .active > .nav-link {
     margin-bottom: 1em;
     line-height: 1.6;
 }
-
 
 .splash {
     background: url('/assets/images/hero.jpg') no-repeat center center/cover;
