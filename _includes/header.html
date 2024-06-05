@@ -1,64 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-    <header id="header" class="navbar navbar-expand-lg fixed-top navbar-light">
-        <div id="navigation-container" class="container d-flex justify-content-between align-items-center">
-            <a title="ChinaComX Logo" class="navbar-brand" href="/">
-                <img src="{{ '/assets/images/chinacomx-logo.png' | relative_url }}" class="brand-logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="mainNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{{ '/about/' | relative_url }}" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="{{ '/team/' | relative_url }}" class="nav-link">Team</a></li>
-                    <li class="nav-item"><a href="{{ '/translations/' | relative_url }}" class="nav-link">Translations</a></li>
-                    <li class="nav-item"><a href="{{ '/publications/' | relative_url }}" class="nav-link">Publications</a></li>
-                    <li class="nav-item"><a href="{{ '/contact/' | relative_url }}" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-            <div class="d-flex logos-right align-items-center">
-                <a class="logo-link" href="https://erc.europa.eu/" title="to the Website of the European Research Center" target="_blank">
-                    <img src="{{ '/assets/images/erc-logo.png' | relative_url }}" class="small-logo">
-                </a>
-                <a class="logo-link" href="https://www.cats.uni-heidelberg.de/" title="to the Website of the CATS" target="_blank">
-                    <img src="{{ '/assets/images/cats-logo.png' | relative_url }}" class="small-logo">
-                </a>
-                <a class="logo-link" href="https://www.uni-heidelberg.de/" title="to the Website of the Heidelberg University" target="_blank">
-                    <img src="{{ '/assets/images/hd-logo.png' | relative_url }}" class="small-logo">
-                </a>
-            </div>
+<header id="header" class="navbar navbar-expand-lg fixed-top navbar-light">
+    <div id="navigation-container" class="container d-flex justify-content-between align-items-center">
+        <a title="ChinaComX Logo" class="navbar-brand">
+            <img src="{{ '/assets/images/chinacomx-logo.png' | relative_url }}" class="brand-logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{{ '/about/' | relative_url }}" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="{{ '/team/' | relative_url }}" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="{{ '/translations/' | relative_url }}" class="nav-link">Translations</a></li>
+                <li class="nav-item"><a href="{{ '/publications/' | relative_url }}" class="nav-link">Publications</a></li>
+                <li class="nav-item"><a href="{{ '/contact/' | relative_url }}" class="nav-link">Contact</a></li>
+            </ul>
         </div>
-    </header>
 
-    <div id="page-title" class="page-title">
-        <h1>Translations</h1>
+        <div class="d-flex logos-right align-items-center">
+            <a class="logo-link" href="https://erc.europa.eu/" title="to the Website of the European Research Center" target="_blank">
+                <img src="{{ '/assets/images/erc-logo.png' | relative_url }}" class="small-logo">
+            </a>
+            <a class="logo-link" href="https://www.cats.uni-heidelberg.de/" title="to the Website of the CATS" target="_blank">
+                <img src="{{ '/assets/images/cats-logo.png' | relative_url }}" class="small-logo">
+            </a>
+            <a class="logo-link" href="https://www.uni-heidelberg.de/" title="to the Website of the Heidelberg University" target="_blank">
+                <img src="{{ '/assets/images/hd-logo.png' | relative_url }}" class="small-logo">
+            </a>
+        </div>
     </div>
-
-    <div id="content" class="content">
-        <p>Content goes here...</p>
-    </div>
-
-    <script>
-        $(window).scroll(function() {
-            var scroll = $(window).scrollTop();
-            var header = $("#header");
-            var pageTitle = $("#page-title");
-
-            if (scroll >= 100) {
-                header.addClass("hidden");
-                pageTitle.addClass("sticky");
-            } else {
-                header.removeClass("hidden");
-                pageTitle.removeClass("sticky");
-            }
-        });
-    </script>
-</body>
-</html>
+</header>
