@@ -4,7 +4,8 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Navbar Styles */
+/* Existing CSS code */
+
 header {
     background: #fff;
     color: #333;
@@ -15,64 +16,30 @@ header {
     left: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    display: none; /* Hide initially */
+    transition: top 0.3s;
 }
 
-header.navbar .navbar-brand svg {
-    width: 40px;
-    height: auto;
+header.show {
+    display: block;
 }
 
-header.navbar .navbar-toggler {
-    border: none;
-}
-
-header.navbar .navbar-nav .nav-link {
-    color: #333;
-    margin: 0 10px;
-}
-
-header.navbar .navbar-nav .nav-link:hover {
-    color: #007bff;
-}
-
-header.navbar .navbar-nav .active > .nav-link {
-    font-weight: bold;
-    color: #007bff;
-}
-
-/* Page Content Styles */
-.content-wrapper {
-    margin-top: 100px; /* Adjust based on navbar height */
-    padding: 2em 1em;
-    background-color: #f9f9f9;
-}
-
-.page-header {
-    background-color: #6bbf59; /* Green background similar to example */
-    color: #fff;
-    padding: 2em 1em;
-    text-align: center;
-}
-
-.page-header h1 {
+header nav ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
 }
 
-.page-content {
-    max-width: 800px;
-    margin: 2em auto;
-    padding: 1em;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+header nav ul li {
+    margin: 0 1em;
 }
 
-.page-content p {
-    margin-bottom: 1em;
-    line-height: 1.6;
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
 }
-
 
 
 .splash {

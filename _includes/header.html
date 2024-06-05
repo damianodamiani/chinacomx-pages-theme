@@ -1,20 +1,9 @@
-<header id="header" class="navbar navbar-expand-lg fixed-top navbar-light">
-    <a title="ChinaComX Logo" class="navbar-brand" href="/">
-        <svg class="brand-logo">
-            <title>ChinaComX, beyond the silk road</title>
-            <use xlink:href="/assets/images/logo.svg#logo"></use>
-        </svg>
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="navmenu navbar-collapse collapse" id="mainNav">
-        <ul id="main-menu" class="navbar-nav ml-auto page-menu menu">
-            <li class="menu-item nav-item"><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
-            <li class="menu-item nav-item"><a href="{{ '/about/' | relative_url }}" class="nav-link">About</a></li>
-            <li class="menu-item nav-item"><a href="{{ '/contact/' | relative_url }}" class="nav-link">Contact</a></li>
+<header id="header" class="hide" data-aos="slide-down" data-aos-anchor-placement="top-bottom">
+    <nav>
+        <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
         </ul>
-    </div>
+    </nav>
 </header>
