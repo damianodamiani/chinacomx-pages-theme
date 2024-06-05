@@ -24,7 +24,7 @@ header.show {
 }
 
 header.navbar .navbar-brand svg {
-    width: 40px;
+    width: 30px;
     height: auto;
 }
 
@@ -38,17 +38,23 @@ header.navbar .navbar-nav {
     align-items: center;
 }
 
+header.navbar .navbar-nav .nav-item {
+    margin-left: 15px;
+}
+
 header.navbar .navbar-nav .nav-link {
     color: #333;
-    margin: 0 10px;
-    padding: 0.5em 1em;
+    font-size: 16px;
+    padding: 0.5em;
+    transition: color 0.3s;
 }
 
 header.navbar .navbar-nav .nav-link:hover {
     color: #007bff;
+    text-decoration: none;
 }
 
-header.navbar .navbar-nav .active > .nav-link {
+header.navbar .navbar-nav .nav-link:focus, header.navbar .navbar-nav .nav-link.active {
     font-weight: bold;
     color: #007bff;
 }
