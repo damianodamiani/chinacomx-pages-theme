@@ -1,27 +1,17 @@
----
-layout: default
----
-<div class="splash">
-    <div class="splash-content">
-        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Project Logo">
-        <h1>ChinaComX</h1>
-        <p>Comics Culture in the People's Republic of China</p>
-        <a href="#posts" class="scroll-down">&#8595;</a>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-GFWbG5g0DfdO1E7U9Eb1mXQK8J8tzm4O9EPIes2RvnAlKl7IKtIhZbmtj+0ve3qDbXxFlmfUOq7G1g4C1S3pRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </div>
-</div>
-<section id="posts" class="content">
-    <div class="container">
-        <h2>Latest Posts</h2>
-        {% for post in site.posts %}
-            <article>
-                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt }}</p>
-            </article>
-        {% endfor %}
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-omEV6rQfvd7REw5g4Irb2s0yWnhp9ElN5PbzZ7/0SP8VeoTqPecWB57Tew+wQ4TlTflw4ENOuOdGEr7N5/Usow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-  AOS.init();
-</script>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body class="home">
+    {% include header.html %}
+    <main>
+        {{ content }}
+    </main>
+    {% include footer.html %}
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
