@@ -1,5 +1,19 @@
 title: ChinaComx
 description: Comics Culture in the People's Republic of China
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yourusername.github.io" # the base hostname & protocol for your site
+url: "http://127.0.0.1:4000"
+baseurl: ""
 theme: minima
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: posts 
+      author_profile: false
+      #read_time: false
+      show_date: true
+      comments: true
+      share: true
+      related: true
