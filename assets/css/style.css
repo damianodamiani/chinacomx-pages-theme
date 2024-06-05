@@ -8,7 +8,7 @@ body {
 header {
     background: #fff;
     color: #333;
-    padding: 1em 0;
+    padding: 0.5em 1em;
     position: fixed;
     width: 100%;
     top: 0;
@@ -16,7 +16,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     opacity: 0; /* Initially hidden */
-    transition: top 0.3s, opacity 0.3s; /* Smooth transition */
+    transition: opacity 0.3s; /* Smooth transition */
 }
 
 header.show {
@@ -32,9 +32,16 @@ header.navbar .navbar-toggler {
     border: none;
 }
 
+header.navbar .navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 header.navbar .navbar-nav .nav-link {
     color: #333;
     margin: 0 10px;
+    padding: 0.5em 1em;
 }
 
 header.navbar .navbar-nav .nav-link:hover {
@@ -48,7 +55,7 @@ header.navbar .navbar-nav .active > .nav-link {
 
 /* Page Content Styles */
 .content-wrapper {
-    margin-top: 100px; /* Adjust based on navbar height */
+    margin-top: 80px; /* Adjust based on navbar height */
     padding: 2em 1em;
     background-color: #f9f9f9;
 }
@@ -78,6 +85,7 @@ header.navbar .navbar-nav .active > .nav-link {
     margin-bottom: 1em;
     line-height: 1.6;
 }
+
 
 
 .splash {
