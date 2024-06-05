@@ -6,11 +6,12 @@ body {
 }
 /* Navbar Styles */
 header {
-    background: #fff;
-    color: #333;
-    padding: 0.3em;  /* Reduce padding to make the navbar smaller */
+    background: #F4F1EA;
+    color: #521600;
+    padding: 0.1em;  /* Reduce padding to make the navbar smaller */
     position: fixed;
     width: 100%;
+    height: 10%;
     top: 0;
     left: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -19,6 +20,22 @@ header {
     transition: opacity 0.3s; /* Smooth transition */
 }
 
+/* Navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 header.show {
     opacity: 1; /* Show when scrolled */
 }
@@ -34,7 +51,7 @@ header .navbar-toggler {
 
 header .navbar-nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     list-style: none;  /* Remove default list style */
     padding: 0;  /* Remove padding */
@@ -54,16 +71,15 @@ header .navbar-nav .nav-link {
 }
 
 header .navbar-nav .nav-link:hover {
-    color: #007bff;
+    color: #B52931;
     text-decoration: none;  /* Ensure no underline on hover */
 }
 
 header .navbar-nav .nav-link:focus, header .navbar-nav .nav-link.active {
     font-weight: bold;
-    color: #007bff;
+    color: #B52931;
     text-decoration: none;  /* Ensure no underline on focus or active */
 }
-
 
 /* Page Content Styles */
 .content-wrapper {
@@ -73,8 +89,8 @@ header .navbar-nav .nav-link:focus, header .navbar-nav .nav-link.active {
 }
 
 .page-header {
-    background-color: #6bbf59; /* Green background similar to example */
-    color: #fff;
+    background-color: #521600; /* Red as in HD Siegel Hintergrund background similar to example */
+    color: #F4F1EA; /* as in HD Siegel Zusatz */
     padding: 2em 1em;
     text-align: center;
 }
@@ -222,7 +238,7 @@ header .navbar-nav .nav-link:focus, header .navbar-nav .nav-link.active {
 
 .scroll-down {
     display: block;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 2em;
     color: #fff;
     text-decoration: none;
@@ -246,10 +262,10 @@ header .navbar-nav .nav-link:focus, header .navbar-nav .nav-link.active {
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: #B52931;
+    color: #F4F1EA;
     text-align: center;
-    padding: 1em 0;
+    padding: 0.3em 0;
 }
 
 footer nav ul {
