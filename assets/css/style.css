@@ -22,19 +22,12 @@ header {
 
 /* Navbar links */
 #navbar a {
-    float: left;
+    float: center;
     display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px;
     text-decoration: none;
-  }
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
   }
 
 header.show {
@@ -48,7 +41,7 @@ header.show {
 }
 
 header .navbar-brand .brand-logo {
-    width: 40px; /* Adjust logo size */
+    width: 100px; /* Adjust logo size */
     height: auto;
     margin-right: 90px; /* Space between logo and text */
 }
@@ -62,8 +55,8 @@ header .navbar-nav {
     justify-content: center;
     align-items: center;
     list-style: none;  /* Remove default list style */
-    margin-left: 30px; /* Add margin to create space between Home link and logo */
-    margin-right: auto; /* Add margin to push logos to the far right */
+    margin-left: 60px; /* Add margin to create space between Home link and logo */
+    margin-right: 80px; /* Add margin to push logos to the far right */
     padding: 0;  /* Remove padding */
     overflow: hidden;  /* Hide overflow */
 }
@@ -98,24 +91,50 @@ header .logos-right {
     margin-left: auto; /* Ensure logos are at the far right */
 }
 
-/* Add to your CSS file */
-.brand-logo {
-    width: 100px;
-    height: auto;
-    margin-left: 40px; /* Add space to the left of the left logo */
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 1px -1px gray;
 }
 
-.small-logo {
-    width: 100px;
-    height: auto;
-    margin-right: 40px; /* Add space to the right of the right logos */
-    margin-left: 10px;
+.navbar-brand img {
+    max-height: 50px;
+    margin-right: 20px;
 }
 
 .navbar-nav {
     flex: 1;
+    display: flex;
     justify-content: center;
-    max-width: 1000px; /* Limit the width of the navbar links */
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.navbar .logos-right img {
+    max-height: 50px;
+    margin-left: 20px;
+}
+
+.logos-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar links */
+.nav-link {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #555;
 }
 
 
@@ -300,7 +319,7 @@ header .logos-right {
 }
 
 footer {
-    background: #B52931;
+    background:  #B52931;
     color: #F4F1EA;
     text-align: center;
     padding: 0.3em 0;
