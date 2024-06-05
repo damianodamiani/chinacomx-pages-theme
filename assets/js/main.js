@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    AOS.init();
-
     const header = document.getElementById("header");
     if (document.body.classList.contains('home')) {
         window.addEventListener("scroll", function() {

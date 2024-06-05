@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-GFWbG5g0DfdO1E7U9Eb1mXQK8J8tzm4O9EPIes2RvnAlKl7IKtIhZbmtj+0ve3qDbXxFlmfUOq7G1g4C1S3pRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="home">
     {% include header.html %}
@@ -22,7 +21,7 @@
             <div class="container">
                 <h2>Latest Posts</h2>
                 <div class="post-carousel">
-                    <button class="carousel-btn left-btn">&#8592;</button>
+                    <button class="carousel-btn left-btn" onclick="scrollLeft()">&#8592;</button>
                     <div class="post-wrapper">
                         {% for post in site.posts %}
                             <div class="post">
@@ -31,13 +30,26 @@
                             </div>
                         {% endfor %}
                     </div>
-                    <button class="carousel-btn right-btn">&#8594;</button>
+                    <button class="carousel-btn right-btn" onclick="scrollRight()">&#8594;</button>
                 </div>
             </div>
         </section>
     </main>
     {% include footer.html %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-omEV6rQfvd7REw5g4Irb2s0yWnhp9ElN5PbzZ7/0SP8VeoTqPecWB57Tew+wQ4TlTflw4ENOuOdGEr7N5/Usow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script>
+        function scrollLeft() {
+            document.querySelector('.post-wrapper').scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        }
+        function scrollRight() {
+            document.querySelector('.post-wrapper').scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
