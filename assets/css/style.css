@@ -8,7 +8,7 @@ body {
 header {
     background: #fff;
     color: #333;
-    padding: 0.25em 1em;  /* Reduce padding to make the navbar smaller */
+    padding: 0.3em;  /* Reduce padding to make the navbar smaller */
     position: fixed;
     width: 100%;
     top: 0;
@@ -24,7 +24,7 @@ header.show {
 }
 
 header .navbar-brand svg {
-    width: 25px; /* Reduce logo size */
+    width: 30px; /* Reduce logo size */
     height: auto;
 }
 
@@ -36,27 +36,32 @@ header .navbar-nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    list-style: none;  /* Remove default list style */
+    padding: 0;  /* Remove padding */
+    margin: 0;  /* Remove margin */
 }
 
 header .navbar-nav .nav-item {
-    margin-left: 10px;  /* Reduce margin between nav items */
+    margin-left: 15px;  /* Reduce margin between nav items */
 }
 
 header .navbar-nav .nav-link {
     color: #333;
-    font-size: 14px;  /* Adjust font size to make text smaller */
-    padding: 0.25em;  /* Reduce padding within links */
+    font-size: 17px;  /* Adjust font size to make text smaller */
+    padding: 0.5em 1em;  /* Reduce padding within links */
     transition: color 0.3s;
+    text-decoration: none;  /* Remove underline */
 }
 
 header .navbar-nav .nav-link:hover {
     color: #007bff;
-    text-decoration: none;
+    text-decoration: none;  /* Ensure no underline on hover */
 }
 
 header .navbar-nav .nav-link:focus, header .navbar-nav .nav-link.active {
     font-weight: bold;
     color: #007bff;
+    text-decoration: none;  /* Ensure no underline on focus or active */
 }
 
 
@@ -93,19 +98,52 @@ header .navbar-nav .nav-link:focus, header .navbar-nav .nav-link.active {
     line-height: 1.6;
 }
 
-/* Home Page Styles */
+/* Splash Page Styles */
 .splash {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background-color: #6bbf59;
     color: white;
-    text-align: center;
+    text-align: left;
+    padding: 20px;
 }
 
-.splash .splash-content {
-    max-width: 600px;
+.splash-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Ensure the width is 80% */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the splash content */
+}
+
+.splash-left {
+    flex: 1;
+}
+
+.splash-right {
+    flex: 3;
+    text-align: left; /* Align text to the left */
+}
+
+.splash-logo {
+    width: 350px;
+    height: auto;
+}
+
+.splash h1 {
+    font-size: 2em; /* Adjust font size if necessary */
+    margin: 0 0 10px 0;
+    line-height: 1.2; /* Adjust line height for better readability */
+}
+
+.splash p {
+    font-size: 1.2em;
+    line-height: 1.4; /* Adjust line height for better readability */
 }
 
 .scroll-down {
@@ -165,7 +203,7 @@ header .navbar-nav .nav-link:focus, header .navbar-nav .nav-link.active {
 }
 
 .splash {
-    background: url('/assets/images/hero.jpg') no-repeat center center/cover;
+    background: url('/assets/images/splash-image.png') no-repeat center center/cover;
     color: #fff;
     height: 100vh;
     display: flex;
