@@ -10,27 +10,34 @@
 <body class="home">
     {% include header.html %}
     <main>
-        {{ content }}
+        <section class="splash">
+            <div class="splash-content">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Project Logo">
+                <h1>ChinaComX</h1>
+                <p>Exploring beyond the Silk Road</p>
+                <a href="#posts" class="scroll-down">&#8595;</a>
+            </div>
+        </section>
+        <section id="posts" class="content-wrapper">
+            <div class="container">
+                <h2>Latest Posts</h2>
+                <div class="post-carousel">
+                    <button class="carousel-btn left-btn">&#8592;</button>
+                    <div class="post-wrapper">
+                        {% for post in site.posts %}
+                            <div class="post">
+                                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                                <p>{{ post.excerpt }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <button class="carousel-btn right-btn">&#8594;</button>
+                </div>
+            </div>
+        </section>
     </main>
     {% include footer.html %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-omEV6rQfvd7REw5g4Irb2s0yWnhp9ElN5PbzZ7/0SP8VeoTqPecWB57Tew+wQ4TlTflw4ENOuOdGEr7N5/Usow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            AOS.init();
-
-            const header = document.getElementById("header");
-            if (document.body.classList.contains('home')) {
-                window.addEventListener("scroll", function() {
-                    if (window.scrollY > 0) {
-                        header.classList.add("show");
-                    } else {
-                        header.classList.remove("show");
-                    }
-                });
-            } else {
-                header.classList.add("show");
-            }
-        });
-    </script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
