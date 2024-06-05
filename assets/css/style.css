@@ -41,10 +41,16 @@ header.show {
     opacity: 1; /* Show when scrolled */
 }
 
+#navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 header .navbar-brand .brand-logo {
     width: 40px; /* Adjust logo size */
     height: auto;
-    margin-right: 10px; /* Space between logo and text */
+    margin-right: 90px; /* Space between logo and text */
 }
 
 header .navbar-toggler {
@@ -56,8 +62,9 @@ header .navbar-nav {
     justify-content: center;
     align-items: center;
     list-style: none;  /* Remove default list style */
+    margin-left: 30px; /* Add margin to create space between Home link and logo */
+    margin-right: auto; /* Add margin to push logos to the far right */
     padding: 0;  /* Remove padding */
-    margin: 0;  /* Remove margin */
     overflow: hidden;  /* Hide overflow */
 }
 
@@ -72,9 +79,9 @@ header .navbar-nav .nav-item {
 header .navbar-nav .nav-link {
     display: block;
     color: #000000;
-    font-size: 17px;  /* Adjust font size to make text smaller */
+    font-size: 16px;  /* Adjust font size to make text smaller */
     text-align: center;
-    padding: 0.5em 1em;  /* Reduce padding within links */
+    padding: 0.2em 0.5em;  /* Reduce padding within links */
     transition: color 0.3s;
     text-decoration: none;  /* Remove underline */
 }
@@ -88,12 +95,29 @@ header .navbar-nav .nav-link:focus, header .navbar-nav .nav-link.active {
 header .logos-right {
     display: flex;
     align-items: center;
+    margin-left: auto; /* Ensure logos are at the far right */
 }
 
-header .logos-right .logo-link img.small-logo {
-    height: 30px;  /* Adjust logo height */
+/* Add to your CSS file */
+.brand-logo {
+    width: 100px;
+    height: auto;
+    margin-left: 40px; /* Add space to the left of the left logo */
+}
+
+.small-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 40px; /* Add space to the right of the right logos */
     margin-left: 10px;
 }
+
+.navbar-nav {
+    flex: 1;
+    justify-content: center;
+    max-width: 1000px; /* Limit the width of the navbar links */
+}
+
 
 /* Page Content Styles */
 .content-wrapper {
