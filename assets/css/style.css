@@ -17,7 +17,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s; /* Smooth transition */
+    transition: opacity 0.5s; /* Smooth transition */
 }
 
 /* Navbar links */
@@ -36,13 +36,15 @@ header {
     top: 0;
     width: 100%;
   }
+
 header.show {
     opacity: 1; /* Show when scrolled */
 }
 
-header .navbar-brand svg {
-    width: 30px; /* Reduce logo size */
+header .navbar-brand .brand-logo {
+    width: 40px; /* Adjust logo size */
     height: auto;
+    margin-right: 10px; /* Space between logo and text */
 }
 
 header .navbar-toggler {
@@ -56,6 +58,11 @@ header .navbar-nav {
     list-style: none;  /* Remove default list style */
     padding: 0;  /* Remove padding */
     margin: 0;  /* Remove margin */
+    overflow: hidden;  /* Hide overflow */
+}
+
+header .navbar-nav .nav-item {
+    float: none;  /* Ensure items do not float */
 }
 
 header .navbar-nav .nav-item {
@@ -63,22 +70,29 @@ header .navbar-nav .nav-item {
 }
 
 header .navbar-nav .nav-link {
-    color: #333;
+    display: block;
+    color: #000000;
     font-size: 17px;  /* Adjust font size to make text smaller */
+    text-align: center;
     padding: 0.5em 1em;  /* Reduce padding within links */
     transition: color 0.3s;
     text-decoration: none;  /* Remove underline */
 }
 
-header .navbar-nav .nav-link:hover {
-    color: #B52931;
-    text-decoration: none;  /* Ensure no underline on hover */
-}
-
 header .navbar-nav .nav-link:focus, header .navbar-nav .nav-link.active {
-    font-weight: bold;
+    font-weight: none;
     color: #B52931;
     text-decoration: none;  /* Ensure no underline on focus or active */
+}
+
+header .logos-right {
+    display: flex;
+    align-items: center;
+}
+
+header .logos-right .logo-link img.small-logo {
+    height: 30px;  /* Adjust logo height */
+    margin-left: 10px;
 }
 
 /* Page Content Styles */
