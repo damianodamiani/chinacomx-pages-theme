@@ -12,4 +12,3 @@ document.addEventListener("DOMContentLoaded", function() {
         header.classList.add("show");
     }
 });
-
