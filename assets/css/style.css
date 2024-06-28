@@ -18,8 +18,7 @@ a:hover {
 }
 
 a:focus {
-    outline: 2px solid #521600; /* Add focus outline for accessibility */
-    outline-offset: 2px;
+    outline: none;
 }
 
 a:active {
@@ -206,7 +205,7 @@ header .logos-right {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 80%; /* Ensure the width is 80% */
+    width: 70%; 
     max-width: 1200px;
     margin: 0 auto; /* Center the splash content */
 }
@@ -438,4 +437,33 @@ input, textarea {
 
 .team-member a:hover {
     text-decoration: underline;
+}
+
+/* General reset for focus outlines */
+* {
+    outline: none;
+}
+
+/* Specific reset for the arrow down */
+.arrow-down {
+    position: relative;
+    display: inline-block;
+}
+
+.arrow-down:focus {
+    outline: none;
+    border: none;
+}
+
+.arrow-down:focus::before,
+.arrow-down:focus::after {
+    content: none;
+}
+
+.post img {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    max-width: 150px; /* Adjust as needed */
+    border-radius: 5px; /* Optional: to add some rounding to the image */
 }

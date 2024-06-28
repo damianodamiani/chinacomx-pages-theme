@@ -17,7 +17,7 @@ permalink: /team/
     <h3>Person 1</h3>
     <p>Role: Project Lead</p>
     <p>Short bio or description about Person 1.</p>
-    <a href="#">See more about Person 1 here.</a>
+    <a href="lena.md">See more about Person 1 here.</a>
   </div>
   <br>  <div class="team-member">
     <img src="{{ '/assets/images/team-placeholder.png' | relative_url }}" alt="Member 1">
