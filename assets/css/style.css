@@ -255,7 +255,6 @@ header .logos-right {
         transform: translateY(-5px);
     }
 }
-
 /* Post Carousel Styles */
 .post-carousel {
     display: flex;
@@ -298,6 +297,18 @@ header .logos-right {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1em;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.post-text {
+    flex-grow: 1;
 }
 
 .carousel-btn {
@@ -314,6 +325,7 @@ header .logos-right {
 .right-btn {
     margin-left: 10px;
 }
+
 
 /* Content Padding */
 .content {
@@ -466,4 +478,26 @@ input, textarea {
     margin-bottom: 20px;
     max-width: 150px; /* Adjust as needed */
     border-radius: 5px; /* Optional: to add some rounding to the image */
+}
+
+/* Post Page Styles */
+.post-page {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.post-page img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.post-page .post-text {
+    margin-top: 1em;
+    line-height: 1.6;
 }

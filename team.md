@@ -4,7 +4,17 @@ title: Team
 permalink: /team/
 ---
 
-## The ChinaComx Team
+The ChinaComx team consists of the following people:
+
+- Dr. Lena HENNINGSEN, Principal Investigator, is working on ...
+- Damian MANDZUNOWSKI, PostDoc Researcher, is working on ...
+- Jiu SONG , PhD Candidate, is working on ...
+- Astrid XIAO, PhD Candidate, is working on ...
+- Aijia ZHANG, PhD Candidate, is working on ... 
+
+Bettina JIN, , are our Research Assistants. 
+
+<!-- 
 
 <img src="{{ '/assets/images/team-placeholder.png' | relative_url }}" alt="Member 1">
 <p>Group photo to come!</p>
@@ -66,3 +76,5 @@ permalink: /team/
 
 - Person 1
 - Person 2
+
+--> 

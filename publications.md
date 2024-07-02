@@ -5,9 +5,11 @@ nav-menu: true
 permalink: /publications/
 ---
 
-In this section, all publications by the ChinaComx team will be listed ongoingly:
+In this section, all project-related publications by the ChinaComx team will be listed ongoingly.
+
 
 <!-- Please use a unified citation style  -->
+<!-- 
 
 | Author | Title | Source | Date | DOI / ISBN / URL |
 |------|-------|---------|---------|
@@ -15,3 +17,5 @@ In this section, all publications by the ChinaComx team will be listed ongoingly
 | Author | Text Title | Book / Journal etc. | Date | [Link](#) |
 | Author | Text Title | Book / Journal etc. | Date | [Link](#) |
 | Author | Text Title | Book / Journal etc. | Date | [Link](#) |
+
+  -->
