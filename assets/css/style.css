@@ -1,10 +1,10 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
-
 /* Global link styles */
 a {
     color: #B52931; /* Default link color */
@@ -25,6 +25,18 @@ a:active {
     color: #521600; /* Even darker color when active (clicked) */
 }
 
+/* Ensure specific link classes inherit the global styles */
+.read-more, .previous-link {
+    color: inherit; /* Inherit color from global link styles */
+    text-decoration: inherit; /* Inherit text-decoration from global link styles */
+    transition: inherit; /* Inherit transition from global link styles */
+}
+
+.read-more:hover, .previous-link:hover {
+    color: inherit; /* Inherit hover color from global link styles */
+    text-decoration: underline; /* Underline on hover */
+}
+
 /* Navbar Styles */
 header {
     background: #F4F1EA;
@@ -39,15 +51,6 @@ header {
     z-index: 1000;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s; /* Smooth transition */
-}
-
-/* Navbar links */
-#navbar a {
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
 }
 
 header.show {
@@ -143,7 +146,6 @@ header .logos-right {
     align-items: center;
 }
 
-/* Navbar links */
 .nav-link {
     color: #000;
     font-size: 16px;
@@ -152,39 +154,6 @@ header .logos-right {
 
 .nav-link:hover {
     color: #555;
-}
-
-/* Page Content Styles */
-.content-wrapper {
-    margin-top: 80px; /* Adjust based on navbar height */
-    padding: 2em 1em;
-    background-color: #f9f9f9;
-}
-
-.page-header {
-    background-color: #B70921; /* Red as in HD Siegel Hintergrund background similar to example */
-    color: #F2EEE4; /* as in HD Siegel Zusatz */
-    padding: 1em 0.5em;
-    text-align: center;
-}
-
-.page-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-.page-content {
-    max-width: 800px;
-    margin: 2em auto;
-    padding: 1em;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-.page-content p {
-    margin-bottom: 1em;
-    line-height: 1.6;
 }
 
 /* Splash Page Styles */
@@ -255,81 +224,38 @@ header .logos-right {
         transform: translateY(-5px);
     }
 }
-/* Post Carousel Styles */
-.post-carousel {
-    display: flex;
-    align-items: center;
-    max-width: 1500px; /* Adjust this value to make the carousel wider */
-    margin: 0 auto; /* Center the carousel */
-    overflow: hidden;
+
+/* Page Content Styles */
+.content-wrapper {
+    margin-top: 80px; /* Adjust based on navbar height */
+    padding: 2em 1em;
+    background-color: #f9f9f9;
 }
 
-.post-carousel .post {
-    flex: 0 0 50%; /* Adjust this value to show more or fewer posts at once */
-    margin: 10px;
-    box-sizing: border-box;
+.page-header {
+    background-color: #B70921; /* Red as in HD Siegel Hintergrund background similar to example */
+    color: #F2EEE4; /* as in HD Siegel Zusatz */
+    padding: 1em 0.5em;
+    text-align: center;
 }
 
-.post-carousel-inner {
-    display: flex;
-    justify-content: space-around;
-    transition: transform 0.5s ease;
+.page-header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
-.post-date {
-    font-size: 0.9em;
-    color: #000000;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.post-wrapper {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-}
-
-.post {
-    min-width: 375px;
-    margin-right: 10px;
+.page-content {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1em;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
 }
 
-.post img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.post-text {
-    flex-grow: 1;
-}
-
-.carousel-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.left-btn {
-    margin-right: 10px;
-}
-
-.right-btn {
-    margin-left: 10px;
-}
-
-
-/* Content Padding */
-.content {
-    padding: 2em 0;
+.page-content p {
+    margin-bottom: 1em;
+    line-height: 1.6;
 }
 
 /* Footer Styles */
@@ -337,26 +263,33 @@ footer {
     background: #521600;
     color: #F4F1EA;
     text-align: center;
-    padding: 0.2em 0;
+    padding: 0.5em 0;
 }
 
-footer nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+footer .container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-footer nav ul li {
-    margin: 0 1em;
+.footer-social {
+    margin-top: 10px;
 }
 
-footer nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.footer-social a {
+    color: #fff; /* Ensure the icons have a visible color */
+    margin: 0 10px;
+    font-size: 20px;
+    display: inline-block;
+    transition: color 0.3s;
 }
 
+.footer-social a:hover {
+    color: #ccc; /* Change color on hover for visibility */
+}
+
+
+/* Container */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -405,7 +338,7 @@ input, textarea {
     border-radius: 4px;
 }
 
-/* Team Design */
+/* Team Section */
 .team-section {
     display: flex;
     flex-wrap: wrap;
@@ -456,7 +389,6 @@ input, textarea {
     outline: none;
 }
 
-/* Specific reset for the arrow down */
 .arrow-down {
     position: relative;
     display: inline-block;
@@ -471,15 +403,74 @@ input, textarea {
 .arrow-down:focus::after {
     content: none;
 }
-
-.post img {
-    float: left;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    max-width: 150px; /* Adjust as needed */
-    border-radius: 5px; /* Optional: to add some rounding to the image */
+/* Post Grid */
+.post-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
 }
 
+.post-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: calc(30% - 14px); /* Change to 30% to fit 3 items in a row */
+    margin: 8px;
+}
+
+.post-card img {
+    width: 100%;
+    height: 250px; /* Adjust the height to show more of the image */        
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+   margin-bottom: 10px;
+}
+
+.post-info {
+    padding: 16px;
+}
+
+.post-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.post-info .post-date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    color: #B52931;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.post-card:hover {
+    transform: translateY(-8px);
+}
+
+@media (max-width: 1024px) {
+    .post-card {
+        width: calc(30% - 14px); /* 3 items in a row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .post-card {
+        width: calc(50% - 12px); /* 2 items in a row for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .post-card {
+        width: 100%; /* 1 item in a row for mobile screens */
+    }
+}
 /* Post Page Styles */
 .post-page {
     max-width: 800px;
@@ -490,14 +481,280 @@ input, textarea {
     border-radius: 5px;
 }
 
-.post-page img {
-    width: 100%;
+.post-header {
+    position: relative;
+    text-align: center;
+}
+
+.post-header img.hero-image {
+    max-width: 50%;
     height: auto;
-    border-radius: 5px;
     margin-bottom: 20px;
 }
 
-.post-page .post-text {
-    margin-top: 1em;
+.post-title {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.post-date {
+    font-size: 1em;
+    color: #888;
+}
+
+.post-content {
+    padding: 20px;
+    font-size: 1.1em;
     line-height: 1.6;
 }
+
+.post-footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-navigation a {
+    color: #007BFF;
+    text-decoration: none;
+}
+/* Post Grid */
+.post-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.post-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: calc(30% - 14px); /* Change to 30% to fit 3 items in a row */
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 450px; /* Set a fixed height for post cards */
+}
+
+.post-card img {
+    width: 100%;
+    height: 200px; /* Adjust the height to show more of the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 10px;
+}
+
+.post-info {
+    padding: 16px;
+    line-height: 1.2; /* Adjust line-height for single line spacing */
+    flex: 1; /* Allow post info to take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out the content evenly */
+}
+
+.post-info h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.1em;
+    line-height: 1.2; /* Adjust line-height for single line spacing */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    display: -webkit-box;
+    -webkit-line-clamp: 8; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+.post-info .post-date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+    line-height: 1.2; /* Adjust line-height for single line spacing */
+}
+
+.previous-activities {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.previous-activities .previous-link {
+    color: #B52931;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+    
+}
+a:hover {
+    color: #521600
+}
+
+a:focus {
+    outline: none;
+}
+
+a:active {
+    color: #521600; /* Even darker color when active (clicked) */
+}
+
+@media (max-width: 1024px) {
+    .post-card {
+        width: calc(33.333% - 16px); /* 3 items in a row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .post-card {
+        width: calc(50% - 16px); /* 2 items in a row for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .post-card {
+        width: 100%; /* 1 item in a row for mobile screens */
+    }
+}
+
+
+/* General Styles for Images within Post Content */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+/* Post Footer Styles */
+.post-footer {
+    padding: 20px;
+    text-align: center;
+    background: none;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-navigation a {
+    color: #B52931; /* Match link color to the rest of the website */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em;
+}
+
+.post-navigation a:hover {
+    color: #521600; /* Darker color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pagination a {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Adjustments for Post Images */
+.post-page .post-header img.hero-image {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px; /* Optional: to match the overall design aesthetic */
+}
+
+/* Post Navigation Styles */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    background: none; /* Remove dark box background */
+}
+
+.post-navigation a {
+    color: #B52931; /* Match link color to the rest of the website */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em;
+}
+
+.post-navigation a:hover {
+    color: #521600; /* Darker color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Adjustments for Post Images */
+.post-page .post-header img.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border: 2px solid red; /* Added for debugging */
+}
+
+/* General Styles for Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the images if necessary */
+}
+
+/* Styles for the News & Activities banner */
+.post-banner {
+    background-color: #B70921; /* Red background color */
+    color: #F2EEE4; /* Text color */
+    padding: 1em 0.5em;
+    text-align: center;
+}
+
+.post-banner .post-title {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Styles for blockquotes */
+blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-left: 5px solid #B70921; /* Grey left border */
+    font-style: italic;
+}
+
+blockquote p {
+    margin: 0; /* Remove default margin */
+}
+
+/* Home Page Footer */
+body.home footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+body.home .footer-social {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+body.home .footer-social a img {
+    width: 24px;
+    margin: 0 10px

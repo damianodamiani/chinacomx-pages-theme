@@ -19,44 +19,34 @@
             <a href="#posts" class="scroll-down">&#8595;</a>
         </section>
         <section id="posts" class="content-wrapper">
-            <div>
-                <div class="page-header">
-                    <h1>ChinaComx: Comics Culture in the People's Republic of China</h1>
+            <div class="page-header">
+                <h1>Upcoming Activities</h1>
             </div>
+            <br>
             <div class="container">
-                <h2 style="text-align:left">News & Activities</h2>
-                <div class="post-carousel">
-                    <button class="carousel-btn left-btn" onclick="scrollLeft()">&#8592;</button>
-                    <div class="post-wrapper">
-                        {% for post in site.posts %}
-                            <div class="post">
-                                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                                <p class="post-date">{{ post.date | date: %d "%B %Y" }}</p>
-                                <p>{{ post.excerpt }}</p>
-                            </div>
-                        {% endfor %}
-                    </div>
-                
-                    <button class="carousel-btn right-btn" onclick="scrollRight()">&#8594;</button>
+                <div class="post-grid">
+                    {% for post in site.posts limit:3 %}
+                        <div class="post-card">
+                            <a href="{{ post.url }}">
+                                {% if post.image %}
+                                    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+                                {% endif %}
+                                <div class="post-info">
+                                    <h3>{{ post.title }}</h3>
+                                    <br>
+                                    <p class="post-date" class="posted-on">posted on: {{ post.date | date: "%d %B %Y" }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="previous-activities">
+                    <a href="/activities" class="previous-link">All Activities ➡️</a>
                 </div>
             </div>
         </section>
     </main>
     {% include footer.html %}
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-    <script>
-        function scrollLeft() {
-            document.querySelector('.post-wrapper').scrollBy({
-                left: -300,
-                behavior: 'smooth'
-            });
-        }
-        function scrollRight() {
-            document.querySelector('.post-wrapper').scrollBy({
-                left: 300,
-                behavior: 'smooth'
-            });
-        }
-    </script>
 </body>
 </html>

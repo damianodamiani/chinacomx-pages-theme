@@ -3,9 +3,8 @@ layout: post
 title: "Damian Mandzunowski Presenting at the Political Lives in Socialist China Conference, 10-12 June in Paris"
 date: 2024-05-30
 categories: jekyll update
+image: /assets/images/PoliticalLivesInSocialistChina.png
 ---
-
-![Political Lives in Socialist China](../assets/images/PoliticalLivesInSocialistChina.png)
 
 ChinaComx researcher Damian Mandzunowski will present a paper titled **Collective Reading Practices After the Cultural Revolution** at the conference [Political Lives in Socialist China](https://www.ehess.fr/fr/colloque/political-lives-socialist-china) organized by [Isabelle Thireau, CNRS/EHESS, CCJ-CECMC](https://www.ehess.fr/fr/personne/isabelle-thireau) and [Puck Engman, Center for Chinese Studies at UC Berkeley](https://history.berkeley.edu/puck-engman) and held at the EHESS: École des hautes études en sciences sociales in Paris on 10-12 June 2024. Click [here](../assets/images/PoliticalLivesInSocialistChina.pdf) for the program.
 

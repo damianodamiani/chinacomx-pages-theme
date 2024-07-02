@@ -2,12 +2,23 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<body>      
-    <main>
-        <div class="post-date" align="right">{{ page.date | date: "%d %B %Y" }}</div>
+<article class="post-page">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-date">{{ page.date | date: "%d %B %Y" }}</p>
+    <div class="post-content">
+        {% if page.image %}
+        <img class="hero-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    {% endif %}
         {{ content }}
-    </main>
-</body>
-</html>
+    </div>
+    <footer class="post-footer">
+        <nav class="post-navigation">
+            {% if page.previous %}
+                <a href="{{ page.previous.url }}" class="prev-post">Previous Activity</a>
+            {% endif %}
+            {% if page.next %}
+                <a href="{{ page.next.url }}" class="next-post">Next Activity</a>
+            {% endif %}
+        </nav>
+    </footer>
+</article>

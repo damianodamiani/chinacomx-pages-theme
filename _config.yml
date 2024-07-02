@@ -1,6 +1,5 @@
 title: ChinaComx
 description: Comics Culture in the People's Republic of China
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://127.0.0.1:4000"
 baseurl: ""
 theme: minima
@@ -10,10 +9,13 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: posts 
+      layout: post
       author_profile: false
-      #read_time: false
       show_date: true
       comments: true
       share: true
       related: true
+
+# Pagination settings
+paginate: 3
+paginate_path: "/page:num/"
